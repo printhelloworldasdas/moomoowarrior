@@ -1,0 +1,119 @@
+#linkContainer {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	background-color: white;
+	text-align: right;
+	padding: 8px;
+	font-size: 20px;
+	border-radius: 4px;
+}
+
+#linkContainer > * {
+	cursor: pointer;
+}
+
+#playerConfigContainer {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	border-radius: 4px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#playerConfigContainer > * {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#chooseSkinButton {
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	border: 3px solid white;
+	border-radius: 20px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#chooseSkinButton:hover {
+	border: 3px solid #e5e3e3;
+	border-radius: 8px !important;
+}
+
+#fullScreenButton {
+	vertical-align: middle;
+	font-size: 50px;
+	margin: -5px;
+	color: white;
+	cursor: pointer;
+}
+
+#fullScreenButton:hover {
+	color: #e5e3e3;
+}
+
+#gameNameContainer {
+	transform-origin: center;
+	transform: scale(1.5);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#gameName {
+	color: white;
+	font-size: 60px;
+}
+
+#gameName2 {
+	color: white;
+	font-size: 100px;
+	margin-top: -30px;
+	padding-bottom: 45px;
+}
+
+#gameName2 span {
+	will-change: scale;
+	transition: 0.5s ease;
+	position: relative;
+	display: inline-block;
+	margin: 5px;
+}
+
+#loadingText {
+	color: white;
+	text-align: center;
+	font-size: 45px;
+}
+
+#inputName {
+	border: none;
+	outline: none;
+	background-color: #e5e3e3;
+	color: #4a4a4a;
+	width: calc(100% - 20px);
+	cursor: text;
+}
+
+@media only screen and (max-width: 896px) {
+	#gameNameContainer {
+		transform: scale(0.9) !important;
+	}
+
+	#gameName2 {
+		padding-bottom: 0px !important;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	#gameNameContainer {
+		transform: scale(0.7) !important;
+	}
+
+	#gameName2 {
+		padding-bottom: 0px !important;
+	}
+}

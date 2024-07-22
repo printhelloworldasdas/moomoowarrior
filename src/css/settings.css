@@ -1,0 +1,82 @@
+#settingsWindow {
+	color: #292929;
+	width: 516px;
+	height: 500px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.settingsTitle {
+	font-size: 25px;
+	margin-bottom: 0px !important;
+}
+
+#graphicsInput {
+	-webkit-appearance: none;
+	appearance: none;
+	height: 10px;
+	width: 100%;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.7;
+}
+
+#graphicsInput:hover {
+	opacity: 1;
+}
+
+#graphicsInput::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 10px;
+	height: 10px;
+	background: gray;
+	cursor: pointer;
+}
+
+.hotKeyContainer {
+	width: calc(100% - 20px);
+	font-size: 20px;
+	padding: 5px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.hotKeyButton {
+	cursor: pointer;
+	padding: 5px;
+	color: white;
+	width: 40px;
+	text-align: center;
+	background-color: #7ee559;
+}
+
+.hotKeyButton:hover {
+	background-color: #6fc94e;
+}
+
+#editStoreButton {
+	background-color: #3fb1fd;
+}
+
+#editStoreButton:hover {
+	background-color: #3693df;
+}
+
+#changeModeButton {
+	background-color: #b573d0;
+}
+
+#changeModeButton:hover {
+	background-color: #9b59b6;
+}
+
+#settingsBackButton {
+	background-color: #e74c3c;
+}
+
+#settingsBackButton:hover {
+	background-color: #c0392b;
+}

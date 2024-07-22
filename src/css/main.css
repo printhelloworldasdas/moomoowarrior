@@ -1,0 +1,209 @@
+* {
+	font-family: "Hammersmith One";
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+html,
+body {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: rgb(118, 143, 90);
+}
+
+a {
+	text-decoration: none;
+	color: #a56dc8;
+	font-size: 20px;
+}
+
+a:visited {
+	color: #a56dc8;
+}
+
+#homeScreen {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.blackScreen {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	white-space: nowrap;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.window {
+	z-index: 1;
+	background-color: white;
+	width: 300px;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.window > * {
+	margin-bottom: 10px !important;
+}
+
+.window > :last-child {
+	margin-bottom: 0px !important;
+}
+
+::-webkit-scrollbar {
+	width: 7px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #c1c1c1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #a8a8a8;
+}
+
+label {
+	font-size: 18px;
+	cursor: pointer;
+}
+
+input[type="checkbox"] {
+	cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+	color: #cecece;
+}
+:-moz-placeholder {
+	color: #cecece;
+	opacity: 1;
+}
+::-moz-placeholder {
+	color: #cecece;
+	opacity: 1;
+}
+:-ms-input-placeholder {
+	color: #cecece;
+}
+
+.greenButton {
+	background-color: #7ee559;
+}
+
+.greenButton:hover {
+	background-color: #6fc94e;
+}
+
+.redButton {
+	background-color: #e74c3c;
+}
+
+.redButton:hover {
+	background-color: #c0392b;
+}
+
+.blueButton {
+	background-color: #3fb1fd;
+}
+
+.blueButton:hover {
+	background-color: #3693df;
+}
+
+.purpleButton {
+	background-color: #b573d0;
+}
+
+.purpleButton:hover {
+	background-color: #9b59b6;
+}
+
+.brownButton {
+	background-color: #9f6f5e;
+}
+
+.brownButton:hover {
+	background-color: #795548;
+}
+
+.backButton {
+	font-size: 25px;
+	padding: 10px;
+	cursor: pointer;
+	text-align: center;
+	width: 100px;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	color: white;
+	border: solid 3px white;
+	border-radius: 5px;
+}
+
+.bigButton {
+	margin: auto;
+	font-size: 25px;
+	padding: 10px;
+	cursor: pointer;
+	text-align: center;
+	width: clamp(100px, calc(100% - 20px), 300px);
+	color: white;
+}
+
+.smallButton {
+	margin: auto;
+	font-size: 20px;
+	padding: 5px;
+	cursor: pointer;
+	text-align: center;
+	width: clamp(100px, calc(100% - 20px), 150px);
+	color: white;
+}
+
+.disabledButton {
+	pointer-events: none;
+	background-color: #777777 !important;
+	cursor: default !important;
+}
+
+.inputRange {
+	-webkit-appearance: none;
+	appearance: none;
+	height: 10px;
+	width: 100%;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.7;
+}
+
+.inputRange:hover {
+	opacity: 1;
+}
+
+.inputRange::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 10px;
+	height: 10px;
+	background: gray;
+	cursor: pointer;
+}

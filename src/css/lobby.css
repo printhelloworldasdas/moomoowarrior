@@ -1,0 +1,372 @@
+#lobbyUiContainer {
+	width: 800px;
+	font-size: 18px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#lobbyUiContainerTop {
+	width: 100%;
+	height: 250px;
+	margin: 10px;
+}
+
+#lobbyUiContainerBottom {
+	width: 100%;
+	height: 260px;
+	margin: 10px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.playersWindow {
+	width: calc(100% - 20px);
+	height: calc(100% - 20px);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.playersWindow > * {
+	margin-bottom: 0 !important;
+}
+
+#lobbyChatWindow {
+	height: calc(100% - 20px);
+	width: calc(100% - 300px - 40px - 20px);
+}
+
+#lobbySettingsWindow {
+	height: calc(100% - 20px);
+	width: 300px;
+}
+
+.playersListContainer {
+	height: 100%;
+}
+
+.playersListContainer > .smallButton {
+	margin-top: 7.5px;
+}
+
+.playersList {
+	width: 100%;
+	height: 190px;
+	background-color: #e2e2e2;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	justify-content: space-between;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#playersList0Type1 {
+	justify-content: flex-start;
+	height: 100%;
+}
+
+.playersList > :last-child {
+	margin-bottom: 10px !important;
+}
+
+.playersListTriple {
+	height: 100%;
+}
+
+.playersListTriple > .playersHolder {
+	width: calc(33% - 20px) !important;
+}
+
+.playersListHalf > .playersHolder {
+	width: calc(50% - 20px) !important;
+}
+
+.playersHolder {
+	width: calc(100% - 20px);
+	height: 50px;
+	margin: 10px 10px 0px;
+	background-color: rgba(0, 0, 0, 0.1);
+	position: relative;
+}
+
+.playersHolderHost {
+	cursor: pointer;
+}
+
+.playersHolderHost:hover {
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+.playersSkin {
+	width: 30px;
+	height: 30px;
+	border: 3px solid #525252;
+	border-radius: 50px;
+	position: absolute;
+	top: 7px;
+	left: 7px;
+}
+
+.playersName {
+	width: calc(100% - 100px);
+	position: absolute;
+	left: 50px;
+	top: 14px;
+	color: #292929;
+	font-size: 16px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.playersID {
+	position: absolute;
+	left: 50px;
+	bottom: 5px;
+	color: gray;
+	font-size: 14px;
+}
+
+.playersIsHost {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	color: gray;
+	font-size: 14px;
+}
+
+.playersPing {
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+	color: #292929;
+	font-size: 14px;
+}
+
+#teamsLockButtonType2 {
+	font-size: 20px;
+	width: 20px;
+	padding: 5px 3px;
+	cursor: pointer;
+	text-align: center;
+	color: white;
+	border-radius: 3px;
+}
+
+#teamsLockButtonType3 {
+	font-size: 20px;
+	width: 20px;
+	padding: 5px 3px;
+	cursor: pointer;
+	text-align: center;
+	color: white;
+	border-radius: 3px;
+}
+
+#lobbyChatContainer {
+	width: calc(100% - 10px);
+	height: calc(100% - 40px - 10px);
+	background-color: #e2e2e2;
+	overflow-y: auto;
+	overflow-x: hidden;
+	font-size: 15px;
+	padding: 5px;
+	-webkit-user-select: text;
+	user-select: text;
+}
+
+#lobbyCommandsContainer {
+	width: calc(100% - 20px);
+	height: calc(100% - 40px);
+	background-color: #e2e2e2;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 0 10px;
+}
+
+#lobbyCommandsContainer > :last-child {
+	margin-bottom: 10px !important;
+}
+
+.lobbyChatMessageHolder,
+.lobbyChatStatusHolder {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.lobbyChatPlayersSkin {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin-right: 5px;
+	border: 1px solid #525252;
+	border-radius: 10px;
+}
+
+.lobbyChatPlayersName,
+.lobbyChatMessage,
+.lobbyChatStatusHolder {
+	-webkit-user-select: text;
+	user-select: text;
+	word-break: break-word;
+	text-wrap: wrap;
+}
+
+.lobbyChatPlayersName {
+	color: #606060;
+}
+
+.lobbyChatMessage {
+	color: #292929;
+}
+
+.lobbyChatStatusHolder {
+	color: #2a6ce3;
+}
+
+.commandsHolder,
+.commandsPlayerHolder {
+	margin: 10px 0;
+	width: calc(100% - 10px);
+	background-color: rgba(0, 0, 0, 0.1);
+	padding: 5px;
+	position: relative;
+	cursor: pointer;
+}
+
+.commandsHolder:hover,
+.commandsPlayerHolder:hover {
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+.commandsTitle {
+	color: #292929;
+	font-size: 18px;
+}
+
+.commandsDesc {
+	font-size: 15px;
+	color: #606060;
+}
+
+.commandsPlayerHolder {
+	position: relative;
+	height: 50px;
+	padding: 0 5px;
+}
+
+.commandsPlayerName {
+	position: absolute;
+	left: 50px;
+	top: 7px;
+	color: #292929;
+	font-size: 16px;
+}
+
+.commandsPlayerID {
+	position: absolute;
+	left: 50px;
+	bottom: 5px;
+	color: gray;
+	font-size: 14px;
+}
+
+#lobbyChatInput {
+	border: none;
+	outline: none;
+	background-color: #e5e3e3;
+	color: #292929;
+	width: calc(100% - 10px);
+	padding: 5px;
+	font-size: 15px;
+	cursor: text;
+}
+
+#lobbyChatInput::-webkit-input-placeholder {
+	color: #a4a4a4;
+}
+#lobbyChatInput:-moz-placeholder {
+	color: #a4a4a4;
+	opacity: 1;
+}
+#lobbyChatInput::-moz-placeholder {
+	color: #a4a4a4;
+	opacity: 1;
+}
+#lobbyChatInput:-ms-input-placeholder {
+	color: #a4a4a4;
+}
+
+.lobbySettingsContainer {
+	width: calc(100% - 24px);
+	background-color: #e5e3e3;
+	padding: 12px;
+	font-size: 18px;
+	color: #292929;
+}
+
+.lobbySettingsButton {
+	color: white;
+	cursor: pointer;
+	text-align: center;
+	border-radius: 3px;
+	float: right;
+}
+
+#lobbyLeaveTitle {
+	font-size: 18px;
+}
+
+#lobbyLeaveButtonContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+#lobbyLeaveButtonContainer > * {
+	width: calc(50% - 20px);
+}
+
+#lobbyTopButtonsContainer {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+#lobbyTopButtonsContainer > * {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#settingsButton {
+	color: white;
+	vertical-align: middle;
+	font-size: 40px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+#settingsButton:hover {
+	color: #e5e3e3;
+}
+
+#fullScreenLobbyButton {
+	vertical-align: middle;
+	font-size: 50px;
+	margin: -5px;
+	color: white;
+	cursor: pointer;
+}
+
+#fullScreenLobbyButton:hover {
+	color: #e5e3e3;
+}

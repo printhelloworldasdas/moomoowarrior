@@ -1,0 +1,210 @@
+#roomWindow {
+	color: #292929;
+	width: 850px;
+	height: 400px;
+}
+
+#roomTopBar {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 15px;
+	text-align: center;
+	background-color: #c0c0c0;
+	width: 100%;
+	overflow: hidden;
+	position: sticky;
+	top: 0;
+	left: 0;
+}
+
+#roomTopBar > :nth-child(1) {
+	width: calc(45% - 5px);
+	text-align: left;
+	padding-left: 5px;
+}
+
+#roomTopBar > :nth-child(2) {
+	width: 10%;
+}
+
+#roomTopBar > :nth-child(3) {
+	width: 25%;
+}
+
+#roomTopBar > :nth-child(4) {
+	width: 20%;
+}
+
+#roomList {
+	width: 100%;
+	height: 100%;
+	background-color: #e2e2e2;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: relative;
+}
+
+#roomListMiddle {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+}
+
+.rooms {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	height: 32px;
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#roomList .rooms:nth-child(odd) {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+.rooms:hover {
+	background-color: #aac5d7 !important;
+}
+
+.rooms > * {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.rooms > :nth-child(1) {
+	width: calc(45% - 5px);
+	text-align: left;
+	padding-left: 5px;
+}
+
+.rooms > :nth-child(2) {
+	width: 10%;
+}
+
+.rooms > :nth-child(3) {
+	width: 25%;
+}
+
+.rooms > :nth-child(4) {
+	width: 20%;
+}
+
+#roomButtonContainer {
+	width: 870px;
+	padding: 10px;
+}
+
+#roomButtonContainer > div {
+	width: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	float: left;
+	border: solid 3px white;
+	border-radius: 5px;
+}
+
+#roomMsg {
+	background-color: #e2e2e2;
+	width: calc(100% - 20px);
+	height: 200px;
+	padding: 10px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-user-select: text;
+	user-select: text;
+}
+
+.roomMsgDiv {
+	-webkit-user-select: text;
+	user-select: text;
+	word-break: break-word;
+	text-wrap: wrap;
+}
+
+#createRoomWindow {
+	font-size: 18px;
+}
+
+#createRoomButtonContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+#createRoomButtonContainer > * {
+	width: calc(50% - 20px);
+}
+
+#joinRoomByIdInput {
+	border: none;
+	outline: none;
+	background-color: #e5e3e3;
+	color: #4a4a4a;
+	width: calc(100% - 10px);
+	cursor: text;
+}
+
+#joinRoomByIdButtonContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+#joinRoomByIdButtonContainer > * {
+	width: calc(50% - 20px);
+}
+
+#ipLeaveWindow {
+	width: 600px;
+}
+
+#ipLeaveTitle {
+	font-size: 20px;
+}
+
+#ipList {
+	width: 100%;
+}
+
+#ipList > div {
+	margin-bottom: 10px;
+}
+
+#ipList > div:last-child {
+	margin-bottom: 0px;
+}
+
+.ipContainer {
+	width: calc(100% - 20px);
+	font-size: 16px;
+	background-color: #e5e3e3;
+	padding: 10px;
+}
+
+.ipName {
+	display: inline-block;
+	width: calc(50% - 10px);
+}
+
+.ipRoomId {
+	display: inline-block;
+	width: 30%;
+}
+
+.ipLeaveButton {
+	font-size: 16px;
+	margin: 0;
+	width: calc(20% - 10px);
+	display: inline-block;
+}

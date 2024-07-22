@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MooMoo Warrior</title>
+		<link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+		<link rel="icon" type="image/png" href="./img/favicon.png" />
+		<meta name="description" content="Play MooMoo Warrior: A thrilling 2D survival game. Join fast-paced multiplayer battles and dominate the server!" />
+		<meta name="keywords" content="games, fun, new, online, moomoowarrior, game, action, survival, free, browser, game" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="moomoowarrior.mooo.com" />
+		<meta property="og:title" content="MooMoo Warrior" />
+		<meta
+			property="og:description"
+			content="Play MooMoo Warrior: A thrilling 2D survival game. Join fast-paced multiplayer battles and dominate the server!" />
+		<meta property="og:url" content="http://moomoowarrior.mooo.com" />
+		<meta property="og:image" content="/img/banner.png" />
+		<meta property="image:width" content="1200" />
+		<meta property="image:height" content="630" />
+		<meta property="og:image:type" content="image/png" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:image" content="http://moomoowarrior.mooo.com/img/banner.png" />
+		<meta name="twitter:site" content="@moomoowarrior.mooo.com" />
+		<meta name="twitter:url" content="http://moomoowarrior.mooo.com" />
+		<meta name="twitter:title" content="MooMoo Warrior" />
+		<meta
+			name="twitter:description"
+			content="Play MooMoo Warrior: A thrilling 2D survival game. Join fast-paced multiplayer battles and dominate the server!" />
+		<link rel="stylesheet" href="src/css/main.css" />
+		<link rel="stylesheet" href="src/css/menu.css" />
+		<link rel="stylesheet" href="src/css/error.css" />
+		<link rel="stylesheet" href="src/css/credits.css" />
+		<link rel="stylesheet" href="src/css/tutorial.css" />
+		<link rel="stylesheet" href="src/css/skins.css" />
+		<link rel="stylesheet" href="src/css/room.css" />
+		<link rel="stylesheet" href="src/css/lobby.css" />
+		<link rel="stylesheet" href="src/css/settings.css" />
+		<link rel="stylesheet" href="src/css/editStore.css" />
+		<link rel="stylesheet" href="src/css/ui.css" />
+		<link rel="stylesheet" href="src/css/spectate.css" />
+	</head>
+	<body>
+		<div id="errorContainer" class="blackScreen" style="display: none">
+			<div class="container">
+				<div id="errorWindow" class="window">
+					<div id="errorTitle">Error</div>
+					<div id="errorText"></div>
+					<div id="errorCloseButton" class="bigButton redButton">Close</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="creditsContainer" class="blackScreen" style="display: none">
+			<div class="container">
+				<div id="creditsWindow" class="window">
+					<div class="creditsBackground">
+						<div class="creditsTitle">Credits</div>
+						<div class="creditsText">Inspired by: <a href="https://moomoo.io" target="_blank">MooMoo.io</a></div>
+						<div class="creditsText">Developed by: <a href="https://kookywarrior.github.io" target="_blank">Kooky Warrior</a></div>
+						<div class="creditsText">Artist: <a href="https://www.youtube.com/channel/UCcp6R62eAnOXTZM7sch8lpg" target="_blank">Linkedash</a></div>
+					</div>
+					<div class="creditsBackground">
+						<div id="creditsParagraph" class="creditsText"></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="creditsBackButton" class="backButton redButton">Back</div>
+		</div>
+
+		<div id="menuContainer" class="blackScreen" style="display: none">
+			<div class="container">
+				<div id="gameNameContainer">
+					<div id="gameName">MooMoo</div>
+					<div id="gameName2"><span>W</span><span>A</span><span>R</span><span>R</span><span>I</span><span>O</span><span>R</span></div>
+				</div>
+
+				<div id="loadingText">Loading...</div>
+
+				<div id="playWindow" class="window" style="display: none">
+					<input type="text" id="inputName" class="bigButton" placeholder="Enter Name" maxlength="15" />
+					<div id="playButton" class="bigButton greenButton">Play</div>
+				</div>
+			</div>
+
+			<div id="playerConfigContainer">
+				<div id="chooseSkinButton" style="display: none"></div>
+				<div id="fullScreenButton" class="material-icons" onclick="toggleFullScreen()">&#xE5D0;</div>
+			</div>
+		</div>
+
+		<div id="tutorialContainer" class="blackScreen" style="display: block">
+			<div class="container">
+				<div id="tutorialWindow" class="window">
+					<div class="tutorialBackground">
+						<div class="tutorialTitle">How To Play MooMoo Warrior?</div>
+						<ol style="margin: 0; padding-left: 22px">
+							<li class="tutorialText">Install a <a href="https://www.tampermonkey.net" target="_blank">browser extension</a> that supports userscripts</li>
+							<li class="tutorialText">Download and enable <a href="./moomoowarrior.user.js" target="_blank">this userscript</a></li>
+							<li class="tutorialText">Navigate to <a href="https://moomoo.io" target="_blank">MooMoo.io</a> and play MooMoo Warrior</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div id="linkContainer">
+				<a id="changelogLink" href="" target="_blank">Changelog</a> | <a href="" id="discordLink" target="_blank">Discord</a> |
+				<a id="creditsLink">Credits</a>
+			</div>
+		</div>
+
+		<div id="skinContainer" class="blackScreen" style="display: none">
+			<div class="container">
+				<div id="skinWindow" class="window"></div>
+			</div>
+
+			<div id="skinBackButton" class="backButton redButton">Back</div>
+		</div>
+
+		<div id="roomContainer" class="blackScreen" style="display: none">
+			<div class="container">
+				<div id="roomWindow" class="window">
+					<div id="roomList">
+						<div id="roomTopBar">
+							<div>HOST NAME</div>
+							<div>PLAYERS</div>
+							<div>GUEST</div>
+							<div>MODE</div>
+							<div>DISTANCE</div>
+							<div>COUNTRY</div>
+						</div>
+						<div id="roomListMiddle">Getting rooms...</div>
+					</div>
+				</div>
+				<div id="roomButtonContainer">
+					<div id="roomCreateRoomButton" class="smallButton blueButton">Create</div>
+					<div id="roomJoinByIdButton" class="smallButton blueButton" style="margin-left: 10px">Join by ID</div>
+					<div id="roomRefreshRoomButton" class="smallButton blueButton" style="float: right">Refresh</div>
+				</div>
+			</div>
+
+			<div id="roomBackButton" class="backButton redButton">Back</div>
+		</div>
+
+		<div id="roomMsgContainer" class="blackScreen" style="display: none">
+			<div class="container">
+				<div id="roomMsgWindow" class="window">
+					<div id="roomMsg"></div>
+					<div id="roomMsgCancelButton" class="smallButton redButton">Cancel</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="createRoomContainer" class="blackScreen" style="display: none">
+			<div class="container">
+				<div id="createRoomWindow" class="window">
+					<div>
+						<input type="checkbox" id="bigRoomInput" />
+						<label for="bigRoomInput">Big Room</label>
+					</div>
+					<div>
+						<input type="checkbox" id="privateInput" />
+						<label for="privateInput">Private Room</label>
+					</div>
+					<div>
+						<input type="checkbox" id="guestInput" />
+						<label for="guestInput">Allow Guest</label>
+					</div>
+					<div>
+						<div id="maxPlayersInputTitle">Max Players: 10</div>
+						<input type="range" min="1" max="10" id="maxPlayersInput" class="inputRange" />
+					</div>
+					<div id="createRoomButtonContainer">
+						<div id="createRoomButton" class="smallButton blueButton">Create</div>
+						<div id="cancelCreateRoomButton" class="smallButton redButton">Cancel</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="joinRoomByIdContainer" class="blackScreen" style="display: none">
+			<div class="container">
+				<div id="joinRoomByIdWindow" class="window">
+					<input type="text" id="joinRoomByIdInput" class="smallButton" placeholder="Enter Room ID" maxlength="15" />
+					<div id="joinRoomByIdButtonContainer">
+						<div id="joinRoomByIdButton" class="smallButton blueButton">Join</div>
+						<div id="cancelJoinRoomByIdButton" class="smallButton redButton">Cancel</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="ipLeaveContainer" class="blackScreen" style="display: none">
+			<div class="container">
+				<div id="ipLeaveWindow" class="window">
+					<div id="ipLeaveTitle">Error: Too many connections from this IP</div>
+					<div id="ipList"></div>
+					<div id="ipLeaveBackButton" class="smallButton redButton">Back</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="diedText" style="display: none">YOU DIED</div>
+		<div id="winText" style="display: none">
+			<div id="winText1"></div>
+			<div id="winText2"></div>
+		</div>
+
+		<div id="spectateContainer" style="display: none">
+			<div id="lobbySpectateButton" class="uiElement gameButton">
+				<i class="material-icons" style="font-size: 40px; vertical-align: middle">&#xe53b;</i>
+				<div id="lobbySpectateButtonMsgCount" class="lobbyButtonMsgCount"></div>
+			</div>
+
+			<div id="respawnButton" class="storeTab" style="display: none">Respawn</div>
+			<div id="spectateNextButton" class="storeTab" style="display: none">Next</div>
+		</div>
+
+		<div id="lobbyContainer" class="blackScreen" style="display: none">
+			<div class="container">
+				<div id="lobbyUiContainer">
+					<div id="lobbyUiContainerTop">
+						<div id="playersWindowType1" class="window playersWindow" style="display: none">
+							<div class="playersListContainer" style="width: 100%">
+								<div id="playersList0Type1" class="playersList playersListTriple"></div>
+							</div>
+						</div>
+						<div id="playersWindowType2" class="window playersWindow" style="display: none">
+							<div class="playersListContainer" style="width: 512px; margin-right: 4px">
+								<div id="playersList1Type2" class="playersList playersListHalf"></div>
+								<div class="smallButton brownButton joinTeamButton" onclick="joinTeam(1)">Join</div>
+							</div>
+							<div id="teamsLockButtonType2" class="material-icons brownButton" onclick="lockTeams()">&#xe897;</div>
+							<div class="playersListContainer" style="width: 254px; margin-left: 4px">
+								<div id="playersList0Type2" class="playersList"></div>
+								<div class="smallButton brownButton joinTeamButton" onclick="joinTeam(0)">Spectate</div>
+							</div>
+						</div>
+						<div id="playersWindowType3" class="window playersWindow">
+							<div class="playersListContainer" style="width: 254px; margin-right: 4px">
+								<div id="playersList1Type3" class="playersList"></div>
+								<div id="playersJoinButtonTeam1" class="smallButton brownButton joinTeamButton" onclick="joinTeam(1)">Join Team 1</div>
+							</div>
+							<div class="playersListContainer" style="width: 254px; margin-right: 4px">
+								<div id="playersList2Type3" class="playersList"></div>
+								<div id="playersJoinButtonTeam2" class="smallButton brownButton joinTeamButton" onclick="joinTeam(2)">Join Team 2</div>
+							</div>
+							<div id="teamsLockButtonType3" class="material-icons brownButton" onclick="lockTeams()">&#xe898;</div>
+							<div class="playersListContainer" style="width: 254px; margin-left: 4px">
+								<div id="playersList0Type3" class="playersList"></div>
+								<div class="smallButton brownButton joinTeamButton" onclick="joinTeam(0)">Spectate</div>
+							</div>
+						</div>
+					</div>
+					<div id="lobbyUiContainerBottom">
+						<div id="lobbyChatWindow" class="window">
+							<div id="lobbyChatContainer"></div>
+							<div id="lobbyCommandsContainer"></div>
+							<input id="lobbyChatInput" placeholder="Enter Message" maxlength="100" />
+						</div>
+						<div id="lobbySettingsWindow" class="window">
+							<div class="lobbySettingsContainer">
+								<span id="lobbyMode">Mode: Teams Deathmatch</span>
+								<div id="lobbyModeButton" class="material-icons lobbySettingsButton brownButton">&#xe5cc;</div>
+							</div>
+							<div class="lobbySettingsContainer">
+								<span id="lobbyPrivate">Private: True</span>
+								<div id="lobbyPrivateButton" class="material-icons lobbySettingsButton brownButton">&#xe5cc;</div>
+							</div>
+							<div id="lobbyStartButton" class="smallButton blueButton">Start</div>
+							<div id="lobbyRoomIdButton" class="smallButton purpleButton">Room ID</div>
+							<div id="lobbyLeaveButton" class="smallButton redButton">Leave</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="lobbyTopButtonsContainer">
+				<div id="settingsButton" class="material-icons">&#xe8b8;</div>
+				<div id="fullScreenLobbyButton" class="material-icons" onclick="toggleFullScreen()">&#xE5D0;</div>
+			</div>
+			<div id="lobbyBackButton" class="backButton redButton">Back</div>
+		</div>
+
+		<div id="lobbyLeaveContainer" class="blackScreen" style="display: none">
+			<div class="container">
+				<div class="window">
+					<div id="lobbyLeaveTitle">Are you sure you want to leave?</div>
+					<div id="lobbyLeaveButtonContainer">
+						<div id="lobbyLeaveConfirmButton" class="smallButton blueButton">Yes</div>
+						<div id="lobbyLeaveCancelButton" class="smallButton redButton">Cancel</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="uiContainer" style="display: none">
+			<div id="actionBarHolder"></div>
+
+			<div id="topUIContainer">
+				<div id="countdownDisplay"></div>
+				<div id="upgradeBarHolder"></div>
+				<div id="upgradeCounter"></div>
+			</div>
+
+			<div id="ageText"></div>
+			<div id="ageBarContainer">
+				<div id="ageBar">
+					<div id="ageBarBody"></div>
+				</div>
+			</div>
+
+			<div id="topInfoHolder">
+				<div id="leaderboard">
+					<span id="leaderboardTitle">Leaderboard</span>
+					<div id="leaderboardData"></div>
+				</div>
+				<div></div>
+				<div id="scoreDisplay" class="resourceDisplay"></div>
+				<div id="killCounter" class="resourceDisplay"></div>
+			</div>
+
+			<div id="foodDisplay" class="resourceDisplay"></div>
+			<div id="woodDisplay" class="resourceDisplay"></div>
+			<div id="stoneDisplay" class="resourceDisplay"></div>
+
+			<div id="performanceDisplay">
+				<div id="pingDisplay" class="resourceDisplay"></div>
+				<div id="fpsDisplay" class="resourceDisplay"></div>
+			</div>
+
+			<div id="itemInfoHolder" class="uiElement" style="display: none"></div>
+
+			<canvas id="mapCanvas" width="300" height="300"></canvas>
+
+			<div id="allianceMenu">
+				<div id="allianceScrollBar"></div>
+				<div id="allianceHolder"></div>
+				<div id="allianceManager"></div>
+			</div>
+
+			<div id="notificationDisplay" style="display: none"></div>
+
+			<div id="gameButtonContainer">
+				<div id="allianceButton" class="uiElement gameButton">
+					<i class="material-icons" style="font-size: 40px; vertical-align: middle">&#xe8d3;</i>
+				</div>
+				<div id="storeButton" class="uiElement gameButton">
+					<i class="material-icons" style="font-size: 40px; vertical-align: middle">&#xe8d1;</i>
+				</div>
+				<div id="chatButton" class="uiElement gameButton">
+					<i class="material-icons" style="font-size: 40px; vertical-align: middle">&#xe8aF;</i>
+				</div>
+				<div id="lobbyButton" class="uiElement gameButton">
+					<i class="material-icons" style="font-size: 40px; vertical-align: middle">&#xe53b;</i>
+					<div id="lobbyButtonMsgCount" class="lobbyButtonMsgCount"></div>
+				</div>
+			</div>
+
+			<div id="chatHolder" style="display: none">
+				<input id="chatBox" type="text" placeholder="Enter Message" maxlength="30" />
+			</div>
+		</div>
+
+		<div id="settingsContainer" class="blackScreen" style="display: none">
+			<div class="container">
+				<div id="settingsWindow" class="window">
+					<div>
+						<input oninput="booleanInput(this)" type="checkbox" id="showPing" />
+						<label for="showPing">Show Ping</label>
+					</div>
+					<div>
+						<input oninput="booleanInput(this)" type="checkbox" id="showFPS" />
+						<label for="showFPS">Show FPS</label>
+					</div>
+					<div>
+						<input oninput="booleanInput(this)" type="checkbox" id="renderGrid" />
+						<label for="renderGrid">Render Grid</label>
+					</div>
+					<div>
+						<input oninput="booleanInput(this)" type="checkbox" id="betterScroll" />
+						<label for="betterScroll">Better Scroll</label>
+					</div>
+					<div>
+						<input oninput="booleanInput(this)" type="checkbox" id="mousemoveThroughUI" />
+						<label for="mousemoveThroughUI">Trigger Mouse Movement Through UI</label>
+					</div>
+					<div class="settingsTitle" id="graphicsTitle"></div>
+					<input type="range" min="1" max="200" id="graphicsInput" />
+					<div id="editStoreButton" class="bigButton blueButton">Edit Store</div>
+					<div class="hotKeyContainer">
+						<span>Food Key</span>
+						<span id="foodKey" class="hotKeyButton"></span>
+					</div>
+					<div class="hotKeyContainer">
+						<span>Spike Key</span>
+						<span id="spikeKey" class="hotKeyButton"></span>
+					</div>
+					<div class="hotKeyContainer">
+						<span>Trap/Boost Key</span>
+						<span id="trapBoostKey" class="hotKeyButton"></span>
+					</div>
+					<div class="hotKeyContainer">
+						<span>Windmill Key</span>
+						<span id="windmillKey" class="hotKeyButton"></span>
+					</div>
+					<div class="hotKeyContainer">
+						<span>Store Key</span>
+						<span id="storeKey" class="hotKeyButton"></span>
+					</div>
+					<div class="hotKeyContainer">
+						<span>Auto Attack Key</span>
+						<span id="autoAttackKey" class="hotKeyButton"></span>
+					</div>
+					<div class="hotKeyContainer">
+						<span>Lock Rotation Key</span>
+						<span id="lockRotationKey" class="hotKeyButton"></span>
+					</div>
+					<div class="hotKeyContainer">
+						<span>Map Marker Key</span>
+						<span id="mapMarkerKey" class="hotKeyButton"></span>
+					</div>
+					<div class="hotKeyContainer">
+						<span>Ping Map Key</span>
+						<span id="pingMapKey" class="hotKeyButton"></span>
+					</div>
+				</div>
+			</div>
+
+			<div id="settingsBackButton" class="backButton redButton">Back</div>
+		</div>
+
+		<div id="editStoreContainer" style="display: none">
+			<div class="container">
+				<div id="storeMenu">
+					<div style="padding-bottom: 15px">
+						<div id="storeHats" class="storeTab" style="margin-left: 0">Hats</div>
+						<div id="storeAccessories" class="storeTab">Accessories</div>
+						<div id="storeAddBlank" class="storeTab">Add Blank</div>
+						<div id="storeReload" class="storeTab">Reload</div>
+					</div>
+					<div id="storeScrollBar"></div>
+					<div id="storeHolder"></div>
+				</div>
+			</div>
+
+			<div id="editStoreBackButton" class="backButton redButton">Back</div>
+		</div>
+
+		<canvas id="gameCanvas"></canvas>
+
+		<script id="moomoowarrior-interval" type="javascript/worker">
+			var intervalIds = {}
+
+			self.onmessage = function (e) {
+				switch (e.data.command) {
+					case "interval:start":
+						var intvalId = setInterval(function () {
+							postMessage({
+								message: "interval:tick",
+								id: e.data.id
+							})
+						}, e.data.interval)
+
+						postMessage({
+							message: "interval:started",
+							id: e.data.id
+						})
+
+						intervalIds[e.data.id] = intvalId
+						break
+
+					case "interval:clear":
+						clearInterval(intervalIds[e.data.id])
+
+						postMessage({
+							message: "interval:cleared",
+							id: e.data.id
+						})
+
+						delete intervalIds[e.data.id]
+						break
+				}
+			}
+		</script>
+		<script type="module" src="src/js/buildMain.js"></script>
+	</body>
+</html>

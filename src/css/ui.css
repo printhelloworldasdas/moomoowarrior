@@ -1,0 +1,511 @@
+#uiContainer {
+	pointer-events: none;
+}
+
+.barItems {
+	display: none;
+	width: 66px;
+	height: 66px;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: rgba(0, 0, 0, 0.25);
+	border-radius: 4px;
+	cursor: pointer;
+	pointer-events: all;
+	background-size: cover;
+}
+
+.barItemsShow {
+	display: inline-block !important;
+}
+
+.barItemsShow:hover {
+	background-color: rgba(50, 50, 50, 0.25);
+}
+
+.barItemsCount {
+	position: absolute;
+	padding-left: 5px;
+	font-size: 22px;
+	color: white;
+}
+
+.barItemsVariant {
+	margin-top: calc(66px - 3px);
+	height: 3px;
+	border-radius: 4px;
+	background-color: white;
+}
+
+#actionBarHolder {
+	width: 100%;
+	height: 66px;
+	text-align: center;
+	position: absolute;
+	bottom: 20px;
+}
+
+#topUIContainer {
+	width: 100%;
+	height: max-content;
+	text-align: center;
+	position: absolute;
+	top: 20px;
+}
+
+#countdownDisplay {
+	width: 100%;
+	text-align: center;
+	font-size: 24px;
+	color: #fff;
+	margin-bottom: 10px;
+	display: none;
+}
+
+#upgradeBarHolder {
+	width: 100%;
+	height: 66px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#upgradeCounter {
+	width: 100%;
+	text-align: center;
+	font-size: 24px;
+	color: #fff;
+}
+
+#ageText {
+	width: 100%;
+	position: absolute;
+	bottom: 118px;
+	text-align: center;
+	color: #fff;
+	font-size: 24px;
+}
+
+#ageBarContainer {
+	width: 100%;
+	position: absolute;
+	bottom: 93px;
+	text-align: center;
+}
+
+#ageBar {
+	background-color: rgba(0, 0, 0, 0.25);
+	border-radius: 5px;
+	padding: 5px;
+	width: 314px;
+	height: 10px;
+	display: inline-block;
+}
+
+#ageBarBody {
+	background-color: rgba(255, 255, 255, 1);
+	border-radius: 3px;
+	width: 0px;
+	height: 100%;
+}
+
+.uiElement,
+.resourceDisplay {
+	background-color: rgba(0, 0, 0, 0.25);
+	border-radius: 4px;
+	color: #fff;
+	padding: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 28px;
+}
+
+.resourceDisplay {
+	position: absolute;
+	right: 20px;
+	height: 35px;
+	text-align: right;
+	line-height: 39px;
+	padding-left: 10px;
+	padding-right: 40px;
+	background-size: 28px;
+	background-repeat: no-repeat;
+	background-position: right 6px center;
+}
+
+#scoreDisplay {
+	background-image: url(../../img/resources/gold.png);
+}
+
+#killCounter {
+	background-image: url(../../img/icons/skull.png);
+}
+
+#scoreDisplay, #killCounter {
+	position: initial;
+	width: max-content;
+	margin-left: auto;
+	margin-bottom: 10px;
+}
+
+#foodDisplay {
+	background-image: url(../../img/resources/food.png);
+	bottom: 130px;
+}
+
+#woodDisplay {
+	background-image: url(../../img/resources/wood.png);
+	bottom: 75px;
+}
+
+#stoneDisplay {
+	background-image: url(../../img/resources/stone.png);
+	bottom: 20px;
+}
+
+#topInfoHolder {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+
+#leaderboard {
+	color: #fff;
+	font-size: 31px;
+	text-align: left;
+	padding: 10px;
+	padding-top: 7px;
+	padding-bottom: 5px;
+	width: 220px;
+	background-color: rgba(0, 0, 0, 0.25);
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+
+.leaderHolder {
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.leaderScore {
+	text-align: right;
+	float: right;
+	margin-left: 10px;
+	font-size: 22px;
+}
+
+.leaderboardItem {
+	float: left;
+	max-width: 140px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 22px;
+}
+
+#performanceDisplay {
+	position: absolute;
+	left: 20px;
+	bottom: 150px;
+}
+
+#pingDisplay,
+#fpsDisplay {
+	position: initial;
+	padding-right: 10px;
+	text-align: left;
+	margin-bottom: 10px;
+	width: max-content;
+}
+
+#mapCanvas {
+	width: 130px;
+	height: 130px;
+	background-color: rgba(0, 0, 0, 0.25);
+	pointer-events: all;
+	border-radius: 4px;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+}
+
+#itemInfoHolder {
+	max-width: 250px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+#itemInfoName {
+	font-size: 30px;
+}
+
+#itemInfoDesc {
+	font-size: 22px;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.itemInfoReq {
+	font-size: 22px;
+}
+
+.itemInfoReqVal {
+	font-size: 22px;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+#chatHolder {
+	position: absolute;
+	bottom: 200px;
+	width: 100%;
+	text-align: center;
+}
+
+#chatBox {
+	padding: 6px;
+	font-size: 20px;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.25);
+	border-radius: 4px;
+	pointer-events: all;
+	border: 0;
+}
+
+#chatBox:focus {
+	outline: none;
+}
+
+#storeMenu {
+	display: none;
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#storeHolder {
+	pointer-events: all;
+	width: 400px;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.25);
+	border-radius: 4px;
+	color: #fff;
+	padding: 10px;
+	height: 200px;
+	max-height: calc(100vh - 200px);
+	overflow-y: scroll;
+}
+
+#storeScrollBar {
+	display: none;
+	position: absolute;
+	width: 3px;
+	background: white;
+	left: calc(50% + 210px - 3px);
+	border-radius: 10px;
+}
+
+.storeTab {
+	width: 183px;
+	margin-left: 10px;
+	font-size: 26px;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.25);
+	border-radius: 4px;
+	color: #fff;
+	padding: 10px;
+	pointer-events: all;
+	cursor: pointer;
+}
+
+.storeTab:hover {
+	background-color: rgba(50, 50, 50, 0.25);
+}
+
+.storeItem {
+	color: #fff;
+	padding: 5px;
+	font-size: 24px;
+	text-align: left;
+	cursor: pointer;
+}
+
+.itemPrice {
+	margin-top: 5px;
+	float: right;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 24px;
+	padding-right: 5px;
+}
+
+.hatPreview {
+	margin-top: -5px;
+	width: 45px;
+	height: 45px;
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 10px;
+}
+
+.joinAlBtn {
+	font-size: 24px;
+}
+
+#allianceMenu {
+	display: none;
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#allianceHolder {
+	pointer-events: all;
+	height: 200px;
+	max-height: calc(100vh - 260px);
+	width: 350px;
+	display: inline-block;
+	text-align: left;
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0.25);
+	border-radius: 4px;
+}
+
+#allianceScrollBar {
+	display: none;
+	position: absolute;
+	width: 3px;
+	background: white;
+	left: calc(50% + 185px - 3px);
+	border-radius: 10px;
+}
+
+.allianceItem {
+	font-size: 24px;
+	height: 30px;
+	color: #fff;
+	padding: 5px;
+}
+
+#allianceNoTribe {
+	height: 30px;
+	font-size: 24px;
+	padding: 5px;
+	color: #fff;
+}
+
+.joinAlBtn {
+	float: right;
+	font-size: 24px;
+	text-align: right;
+	cursor: pointer;
+	color: #80eefc;
+}
+
+.joinAlBtn:hover {
+	color: #72d3e0;
+}
+
+.notificationText {
+	vertical-align: top;
+	font-size: 25px;
+	color: #fff;
+	display: inline-block;
+}
+
+.notifButton {
+	padding: 5px;
+	margin-left: 10px;
+	display: inline-block;
+	cursor: pointer;
+	pointer-events: all;
+	background-color: rgba(0, 0, 0, 0.25);
+	border-radius: 4px;
+}
+
+.notifButton:hover {
+	background-color: rgba(50, 50, 50, 0.25);
+}
+
+#notificationDisplay {
+	vertical-align: top;
+	position: absolute;
+	right: 270px;
+	top: 80px;
+	text-align: right;
+}
+
+.allianceButtonM {
+	pointer-events: all;
+	cursor: pointer;
+	margin-top: 10px;
+	font-size: 24px;
+	color: #fff;
+	padding: 5px;
+	background-color: rgba(0, 0, 0, 0.25);
+	border-radius: 4px;
+	padding: 5px;
+	text-align: center;
+	display: inline-block;
+}
+
+.allianceButtonM:hover {
+	background-color: rgba(50, 50, 50, 0.25);
+}
+
+#allianceInput {
+	pointer-events: all;
+	font-size: 24px;
+	color: #fff;
+	padding: 5px;
+	background-color: rgba(0, 0, 0, 0.25);
+	border-radius: 4px;
+	padding: 5px;
+	display: inline-block;
+	outline: none;
+	border-color: none;
+	border: 0;
+	box-shadow: none;
+	width: 200px;
+	margin-right: 10px;
+}
+
+#gameButtonContainer {
+	position: absolute;
+	top: 20px;
+	right: 270px;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.gameButton {
+	padding: 5px;
+	cursor: pointer;
+	pointer-events: all;
+	margin-left: 10px;
+}
+
+.gameButton:hover {
+	background-color: rgba(50, 50, 50, 0.25);
+}
+
+#lobbyButton {
+	position: relative;
+}
+
+.lobbyButtonMsgCount {
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	font-size: 15px;
+	color: white;
+	background-color: red;
+	padding: 5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

@@ -1,0 +1,15 @@
+#errorWindow {
+	color: #292929;
+	width: 516px;
+	height: auto;
+}
+
+#errorTitle {
+	font-size: 25px;
+	margin-bottom: 0px !important;
+}
+
+#errorText {
+	font-size: 20px;
+	white-space: pre-line;
+}

@@ -1,0 +1,21 @@
+#creditsWindow {
+	color: #292929;
+	width: 516px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.creditsBackground {
+    width: calc(100% - 20px);
+    background-color: #e2e2e2;
+    padding: 10px;
+}
+
+.creditsTitle {
+    font-size: 25px;
+}
+
+.creditsText {
+    font-size: 20px;
+    white-space: pre-line;
+}

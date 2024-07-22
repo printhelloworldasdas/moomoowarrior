@@ -1,0 +1,76 @@
+Changelog
+
+[v0.0.8] - 2024-07-22
+> Players now need to use a script to access the game instead of playing directly via URL
+> Removed the game's policy
+> Removed anticheat
+> Removed login system
+> Removed the feature that shows the country in the room list
+
+[v0.0.7] - 2024-07-01
+> Added Hot Potato Mode
+> Added Jailbreak Mode
+> Added Potato Hat (for Hot Potato Mode)
+> Added Police Cap (for Jailbreak Mode)
+> Bug Fixes:
+- Fixed a bug with the grapple gun where the player couldn't pull another player
+- Fixed the tribe UI issue when joining another room right after leaving a room
+- Fixed the player auto-attack issue when clicking the equip and unequip buttons too quickly
+- Fixed the issue where hotkeys couldn't be changed in the settings
+
+[v0.0.6] - 2024-06-26
+> Added Free-for-All (FFA) Mode and Team Deathmatch Mode
+> Added a feature allowing players to choose whether to trigger mouse movements through the UI
+> Added turret gear
+> Changed server-client networking to peer-to-peer networking
+> Added numerous new UI elements
+> Removed the requirement for players to login to play
+> Added credits page
+> Changed the game's policy
+
+[v0.0.5] - 2024-04-28
+> Added Grapple Gun (https://youtu.be/Ip5wZE96vRo)
+> Added Sandbox Mode
+> Added Toggle Full Screen Mode Button
+> Added feature allowing players to choose whether to use the better scroll feature
+> Ranged weapons will hold invisible projectiles when not reloaded
+> Buffed cheese
+> Reworked sawblade mechanics:
+- Removed 'reduces damage taken' feature
+- Added 'reduces damage received by projectiles' feature
+> Store Balance Changes:
+- Thorn price increased from 10000 to 25000
+- Sawblade price increased from 12000 to 30000
+> Bug Fixes:
+- Fixed anticheat issue
+- Resolved thorn malfunctioning bug
+
+[v0.0.4] - 2024-04-24
+> Changed anticheat algorithm
+> Added ping mini map hotkey
+> Modified upgrade tree:
+- Need to upgrade to cookie before upgrading to cheese
+- Need to upgrade to stone wall before upgrading to castle wall
+
+[v0.0.3] - 2024-04-20
+> Changed anticheat algorithm
+> Added anticheat ban log to identify reasons for player bans
+> Bug Fixes:
+- Fixed an issue where item & weapon descriptions were not displaying
+
+[v0.0.2] - 2024-04-19
+> Animal Balance Changes:
+- Golem hit range buffed from 210 to 230
+- Dragon food drop increased from 3000 to 4000
+- Dragon gold drop increased from 5000 to 6000
+- Fish food drop decreased from 150 to 50
+- Fish gold drop decreased from 500 to 250
+> Golem, Dragon & Treasure are now immune to teleporter
+> Bug Fixes:
+- Fixed turret projectile visibility
+- Corrected Dragon's fireball shooting direction
+- Fixed deny request join tribe button
+- Fixed select skin buttons
+
+[v0.0.1] - 2024-04-18
+> Initial Release

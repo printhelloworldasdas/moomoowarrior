@@ -1,0 +1,61 @@
+#diedText {
+	color: #fff;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+	padding: 0px;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 0px;
+	animation: growText 1s ease forwards;
+}
+
+#winText {
+	color: #fff;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+	padding: 0px;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 0px;
+	animation: growText 1s ease forwards;
+}
+
+@keyframes growText {
+	100% {
+		font-size: 120px;
+	}
+}
+
+#spectateContainer {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+#respawnButton {
+	position: absolute;
+	margin: auto;
+	text-align: center;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#spectateNextButton {
+	position: absolute;
+	margin: auto;
+	text-align: center;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#lobbySpectateButton {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}

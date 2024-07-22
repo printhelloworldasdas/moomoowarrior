@@ -1,0 +1,21 @@
+#tutorialWindow {
+	color: #292929;
+	width: 550px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.tutorialBackground {
+    width: calc(100% - 20px);
+    background-color: #e2e2e2;
+    padding: 10px;
+}
+
+.tutorialTitle {
+    font-size: 25px;
+}
+
+.tutorialText {
+    font-size: 20px;
+    white-space: pre-line;
+}
