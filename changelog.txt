@@ -1,5 +1,11 @@
 Changelog
 
+[v0.1.0] - 2025-01-11
+> Added Helicopter Cap
+> Bug Fixes:
+- Fixed issue where jailed players can be pushed into game objects in Jailbreak mode
+- Fixed disconnection after a few minutes
+
 [v0.0.9] - 2024-12-03
 > Removed turret gear delay when first equipped
 > Improved peer-to-peer connection establishment
