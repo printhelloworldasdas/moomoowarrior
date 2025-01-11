@@ -6,6 +6,7 @@
 		"source": "https://kookywarrior.github.io/moomoowarrior-sources",
 		"backend": "https://moomoowarrior-kookywarrior.ladeapp.com",
 		"backendWS": "wss://moomoowarrior-kookywarrior.ladeapp.com",
+		"backendWS2": "wss://moomoowarriorbackupws-kookywarrior.ladeapp.com",
 		"discord": "https://discord.gg/uxMzsK2a6u"
 	}
 }
